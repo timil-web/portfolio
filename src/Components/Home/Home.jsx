@@ -10,9 +10,10 @@ const Home = () => {
 			<TextChange/>
 		  </h1>
 		  <p className='text-sm md:text-2xl tracking-tight'>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nulla. Lorem ipsum, dolor sit amet consectetur 
+			I'm a Full Stack Developer currently pursuing a degree in Electronics and Telecommunication Engineering at IIIT Bhubaneswar
 		  </p>
-		  <button className='mt-5 md:md-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
+		  <button onClick={() => window.scrollTo({ top: document.getElementById("Footer").offsetTop, behavior: "smooth" })} 
+		  className='mt-5 md:md-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 
 		  hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]'>
 			Contact Me
 		  </button>
