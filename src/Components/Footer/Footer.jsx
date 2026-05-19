@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-	<div
+    <div
       id="Footer"
       className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center"
     >
@@ -16,19 +16,45 @@ const Footer = () => {
         </h3>
       </div>
 
-      <ul className="text-sm md:text-xl">
-        <li className="flex gap-1 items-center">
+      <ul className="text-sm md:text-xl space-y-3">
+
+        <li className="flex gap-2 items-center text-white">
           <MdOutlineEmail size={20} />
-          myemail@gmail.com
+
+          <a
+            href="mailto:timilvaishnav@gmail.com"
+            className="hover:text-cyan-400 transition duration-300 break-all"
+          >
+            timilvaishnav@gmail.com
+          </a>
         </li>
-        <li className="flex gap-1 items-center">
-          <CiLinkedin />
-          linkdlin.com/username
+
+        <li className="flex gap-2 items-center text-white">
+          <CiLinkedin size={20} />
+
+          <a
+            href="https://www.linkedin.com/in/timil-vaishnav-4b379128a"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition duration-300 break-all"
+          >
+            LinkedIn Profile
+          </a>
         </li>
-        <li className="flex gap-1 items-center">
-          <FaGithub />
-          github.com/username
+
+        <li className="flex gap-2 items-center text-white">
+          <FaGithub size={20} />
+
+          <a
+            href="https://github.com/timil-web"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cyan-400 transition duration-300 break-all"
+          >
+            GitHub Profile
+          </a>
         </li>
+
       </ul>
     </div>
   )

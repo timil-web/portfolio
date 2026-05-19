@@ -1,24 +1,122 @@
-import React from 'react'
+import React from "react";
 import bannerImg from "../../assets/banner.png";
 
-const ProjectCard = ({ title, main }) => {
+const ProjectCard = ({
+  title,
+  main,
+  demoLink,
+  githubLink,
+}) => {
   return (
-	<div className="p-3 md:p-6 flex flex-col w-80 bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl">
-      <img className="p-4" src={bannerImg} alt="" />
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
-        {title}
-      </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 md:p-4 flex gap-2 md:gap-4">
-        <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Demo
-        </button>
-        <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Source Code
-        </button>
+    <div
+      className="
+        bg-[#0c0e19]
+        border border-gray-800
+        rounded-2xl
+        overflow-hidden
+        shadow-lg shadow-slate-900
+        hover:scale-[1.02]
+        hover:shadow-2xl
+        transition-all
+        duration-300
+        flex
+        flex-col
+        justify-between
+      "
+    >
+      {/* IMAGE */}
+      <div className="overflow-hidden">
+        <img
+          className="
+            w-full
+            h-52
+            object-cover
+            hover:scale-105
+            transition duration-500
+          "
+          src={bannerImg}
+          alt={title}
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="p-5 flex flex-col flex-grow">
+
+        <h3
+          className="
+            text-xl
+            md:text-2xl
+            font-bold
+            text-white
+          "
+        >
+          {title}
+        </h3>
+
+        <p
+          className="
+            text-sm
+            md:text-base
+            text-gray-300
+            leading-relaxed
+            mt-3
+            flex-grow
+          "
+        >
+          {main}
+        </p>
+
+        {/* BUTTONS */}
+        <div className="flex gap-4 mt-6">
+
+          {/* DEMO BUTTON */}
+          <a
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              flex-1
+              text-center
+              bg-[#465697]
+              hover:bg-[#5d72c9]
+              text-white
+              py-2.5
+              rounded-xl
+              font-semibold
+              transition
+              duration-300
+              hover:scale-105
+            "
+          >
+            Demo
+          </a>
+
+          {/* GITHUB BUTTON */}
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              flex-1
+              text-center
+              border
+              border-[#465697]
+              text-white
+              py-2.5
+              rounded-xl
+              font-semibold
+              transition
+              duration-300
+              hover:bg-[#465697]
+              hover:scale-105
+            "
+          >
+            Source Code
+          </a>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
